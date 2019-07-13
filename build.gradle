@@ -10,7 +10,6 @@ buildscript {
 
 group = 'com.github.colinrtwhite'
 version = '4.3.0'
-project.ext.pomDesc = 'Gradle plug-in to build Firebase applications.'
 
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'groovy'
@@ -37,12 +36,6 @@ gradlePlugin {
             implementationClass = 'com.google.gms.googleservices.GoogleServicesPlugin'
         }
     }
-}
-
-apply from: 'publish.gradle'
-
-if (project.hasProperty('bintrayUser') && project.hasProperty('bintrayKey')) {
-    apply from: 'bintray.gradle'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
