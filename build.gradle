@@ -1,22 +1,21 @@
 buildscript {
     repositories {
+        google()
+        mavenCentral()
         jcenter()
     }
-    dependencies {
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-    }
 }
+
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven'
 
 group = 'com.github.colinrtwhite'
 version = '4.3.0'
 
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'groovy'
-apply plugin: 'java-gradle-plugin'
-
 repositories {
     google()
+    mavenCentral()
     jcenter()
 }
 
