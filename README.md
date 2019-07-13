@@ -1,25 +1,23 @@
-# Google Play services Plugins
+# Google Services Gradle Plugin
 
-This project contains plugins to help with using Google Play services and
-Firebase libraries.
+This plugin converts the google-services.json file for Firebase into a set of resources that the Firebase libraries can use. It also references the strict-version-matcher plugin, and will execute those checks as well. 
 
-## Getting Started
+## Usage
 
-The plugins contained in this project are meant to work with the Google Play
-services SDK.  See https://developers.google.com/android/guides/overview to
-get started.
+Add [JitPack](https://jitpack.io) to your list of repositories:
 
-## Contents
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
 
-### strict-version-matcher-plugin
+And add the library to your list of dependencies:
 
-Helps with managing cross-library version dependencies between components.
-
-### oss-licenses-plugin
-
-Helps apps to display open source software licenses and notices.
-
-### google-services-plugin
-
-Required for firebase applications on android, converts google-services.json to a resource file for use by the app, and references the code in strict-version-matcher.
-
+```groovy
+buildscript {
+    dependencies {
+        classpath 'com.github.colinrtwhite:google-services-plugin:4.3.0'
+    }
+}
+```
