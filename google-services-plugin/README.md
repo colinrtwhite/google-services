@@ -4,41 +4,20 @@ This plugin converts the google-services.json file for Firebase into a set of re
 
 ## Usage
 
-### Plugins DSL
+Add [JitPack](https://jitpack.io) to your list of repositories:
 
-Add the following to your project's settings.gradle:
-
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
 ```
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        google()
+
+And add the library to your list of dependencies:
+
+```groovy
+buildscript {
+    dependencies {
+        classpath 'com.github.colinrtwhite:google-services-plugin:4.3.0'
     }
 }
 ```
-
-Apply the plugin in your app's build.gradle:
-
-```
-plugins {
-    id 'com.google.gms.google-services' version '4.2.0'
-}
-```
-
-## Legacy way
-
-Add the following to your buildscript classpath, obtained from Google’s
-[Maven repository](//developer.android.com/studio/build/dependencies#google-maven):
-
-```
-classpath 'com.google.gms:google-services:4.2.0'
-```
-
-Apply the plugin in your app's build.gradle:
-
-```
-apply plugin: 'com.google.gms.google-services'
-```
-
-These instructions are also documented
-[online](//developers.google.com/android/guides/versioning)
