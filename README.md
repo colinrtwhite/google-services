@@ -17,7 +17,7 @@ And add the library to your list of dependencies:
 ```groovy
 buildscript {
     dependencies {
-        classpath 'com.github.colinrtwhite:google-services-plugin:4.3.0'
+        classpath 'com.github.colinrtwhite:google-services-plugin:<LATEST_COMMIT_HASH>'
     }
 }
 ```
